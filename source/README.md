@@ -1,0 +1,1 @@
+This folder contains the source contents for your project. It includes sample material in the `chapters`, `data`, and `images` folders. Feel free to delete or edit these files accordingly. 
