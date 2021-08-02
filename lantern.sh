@@ -16,7 +16,6 @@ LATEX='--filter pandoc-crossref --defaults assets/defaults/latex.yml --no-highli
 EPUB='--defaults assets/defaults/epub.yml --mathml'
 OAI='assets/empty.txt --defaults assets/defaults/oai.yml'
 
-
 # utilities
 PANDOC_COMMAND='pandoc --quiet'
 
@@ -34,8 +33,6 @@ latex="$OUTPUT_DIRECTORY/$OUTPUT_FILENAME.tex"
 markdown="$OUTPUT_DIRECTORY/$OUTPUT_FILENAME.md"
 
 oai="$OUTPUT_DIRECTORY/$OUTPUT_FILENAME.xml"
-
-# maybe use 'chmod +x [file]' command to all files in directory
 
 preprocess() {
     docx_files=`ls -1 source/preprocess/*.docx 2>/dev/null | wc -l`
@@ -85,7 +82,7 @@ html() {
     mkdir -p $OUTPUT_DIRECTORY;
     $PANDOC_COMMAND assets/empty.txt $HOME -o public/index.html;
     $PANDOC_COMMAND chapters.md $HTML -o public/textbook.html;
-    cp -r source/images $OUTPUT_DIRECTORY;
+    cp -r source/static/* $OUTPUT_DIRECTORY;
     cp -r assets/lib $OUTPUT_DIRECTORY;
     cp -r assets/styles/ $OUTPUT_DIRECTORY;
     rm chapters.md;
