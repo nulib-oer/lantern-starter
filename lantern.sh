@@ -70,10 +70,11 @@ clean() {
 }
 
 epub() {
-    awk 'FNR==1 && NR!=1 {print "\n\n"}{print}' $CHAPTERS >> chapters.md;
     mkdir -p $OUTPUT_DIRECTORY;
-    $PANDOC_COMMAND chapters.md $EPUB -o $epub;
-    rm chapters.md;
+    awk 'FNR==1 && NR!=1 {print "\n\n"}{print}' $CHAPTERS > source/chapters/chapters.md
+    sed -i 's/]\(images/]\(static\/images/' source/chapters/chapters.md
+    $PANDOC_COMMAND source/chapters/chapters.md $EPUB -o $epub;
+    rm public/chapters.md;
     echo "📖 The EPUB edition is now available in $epub";
 }
 
@@ -120,7 +121,7 @@ oai() {
 }
 
 textbook() {
-    epub
+    #epub
     pdf
     latex
     docx
