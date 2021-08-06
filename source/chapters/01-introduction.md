@@ -39,7 +39,7 @@ _Courtesy of [MathJax](https://www.mathjax.org/#samples)_
 
 The Quadratic Formula:
 
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+$$x = {-b \pm \sqrt{b^2-4ac} \frac 2a}.$$
 
 Cauchy's Integral Formula:
 
