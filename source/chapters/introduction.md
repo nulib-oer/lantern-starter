@@ -1,3 +1,8 @@
+---
+title: Introduction to Vegetable Lasagna
+category: 1
+---
+
 # Introduction to Vegetable Lasagna
 
 ::: box

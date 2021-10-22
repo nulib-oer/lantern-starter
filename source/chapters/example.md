@@ -1,3 +1,8 @@
+---
+title: Example Chapter
+category: 2
+---
+
 # Example Chapter
 
 ::: box
